@@ -1,0 +1,74 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class KarateScholarship {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Karate Scholarship");
+        
+        System.out.print("Enter your Fullname: ");
+        String fullname = scanner.nextLine();
+        
+        System.out.print("Enter your Birthplace: ");
+        String birthplace = scanner.nextLine();
+        
+        System.out.print("Enter your Age: ");
+        double age = scanner.nextDouble();
+        
+        System.out.print("Enter your Weight: ");
+        double weight = scanner.nextDouble();
+        
+        System.out.print("Enter your Height: ");
+        double height = scanner.nextDouble();
+        scanner.nextLine(); // consume newline
+        
+        System.out.print("Choose kata or kumite: ");
+        String game = scanner.nextLine();
+        
+        System.out.print("Choose 3pm-4pm or 5pm-7pm: ");
+        String trainingSession = scanner.nextLine();
+        
+        System.out.print("Enter your available date: ");
+        String date = scanner.nextLine();
+        
+        System.out.print("Do you want to be a scholar? (yes/no): ");
+        String scholarship = scanner.nextLine();
+        
+        // Suggest workout based on weight
+        List<String> recommendedWorkout = new ArrayList<>();
+        
+        if (weight > 60) { // you need to lose weight
+            recommendedWorkout.add("Running or jogging");
+            recommendedWorkout.add("Push or pull up");
+            recommendedWorkout.add("Plank");
+            recommendedWorkout.add("Use dumbbell for strength training");
+        } else {
+            recommendedWorkout.add("Jumping jacks");
+            recommendedWorkout.add("Squats");
+            recommendedWorkout.add("Plank");
+            recommendedWorkout.add("Use resistance band for light training");
+        }
+        
+        System.out.println("\n---Scholarship Information---\n");
+        System.out.println("Fullname: " + fullname);
+        System.out.println("Birthplace: " + birthplace);
+        System.out.println("Age: " + age);
+        System.out.println("Weight: " + weight);
+        System.out.println("Height: " + height);
+        System.out.println("Exercise: " + game);
+        System.out.println("Training session: " + trainingSession);
+        System.out.println("Date: " + date);
+        System.out.println("Scholarship interest: " + scholarship);
+        
+        System.out.println("\n---Recommended Workout for Weight Management---");
+        for (String workout : recommendedWorkout) {
+            System.out.println("- " + workout);
+        }
+        
+        System.out.println("\nYou're starting with 50% scholarship eligibility!");
+        
+        scanner.close();
+    }
+}
