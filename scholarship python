@@ -1,0 +1,46 @@
+print("Karate Scholorship")
+fullname = input("Enter your Fullname: ")
+birthplace = input("Enter your Birthplace: ")
+age = float(input("Enter your Age: "))
+weight = float(input("Enter your Weight: "))
+height = float(input("Enter your Height: "))
+
+game = input("Choose kata or kumite: ")
+training_sesion = input("Choose 3pm-4pm or 5pm-7pm: ")
+date = input("Enter your avialable date: ")
+
+
+scholarship = input("Do you want to be a scholar? (yes/no): ")
+
+# Suggest work_out based wiegth
+if weight > 60:  # you need to lose wieght
+    recommended_work_out = [
+        "Running or jogging",
+        "push or pull up",
+        "plank"
+        "or use dumbell for Strength "
+    ]
+else:
+    recommended_work_out = [
+        "jumping jack"
+        "sqout",
+        "Plank",
+        "use resistance band for ligth training"
+
+    ]
+
+print("\n---scholar ship---\n")
+print(f"Fullname: {fullname}")
+print(f"Birthplace: {birthplace}")
+print(f"Age: {age}")
+print(f"Weight: {weight}")
+print(f"Height: {height}")
+print(f"Exercise: {game}")
+print(f"Training sesion: {training_sesion}")
+print(f"Date: {date}")
+
+print(f"then dont slack in your training : {scholarship}")
+print("\n---Recommended workout for Weight management---")
+for work_out in recommended_work_out:
+    print(f"- {work_out}")
+    print("your starting 50% scholarship")
